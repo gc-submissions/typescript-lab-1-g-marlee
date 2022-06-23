@@ -16,14 +16,14 @@ const products: Product[] = [{
 
 export function calcAverageProductPrice(products: Product[]): number {
     let total = 0;
-    products.forEach(product => {
-        total += product.price;
-    });
-
     if (products.length > 0) {
-        return total/products.length;
+        products.forEach(product => {
+            total += product.price;
+        });
+        return total/ products.length;
     }
-    return 0;    
+
+    return total;    
 };
 
 const average = calcAverageProductPrice(products);

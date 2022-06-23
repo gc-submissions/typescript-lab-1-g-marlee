@@ -26,3 +26,7 @@ export function calcInventoryValue(inventory: InventoryItem[]): number {
 
     return total;
 }
+
+const total = calcInventoryValue(inventory);
+
+console.log(total);

@@ -16,3 +16,13 @@ const inventory: InventoryItem[] = [{
     product: {name: "LED", price: 1.00},
     quantity: 20,
 }];
+
+export function calcInventoryValue(inventory: InventoryItem[]): number {
+    let total = 0;
+
+    inventory.forEach(item => {
+        total += item.product.price * item.quantity;
+    });
+
+    return total;
+}
